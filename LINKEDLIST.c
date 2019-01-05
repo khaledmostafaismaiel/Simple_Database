@@ -17,6 +17,12 @@ bool SDB_AddEntry(uint8 id, uint8 year, uint8 *subjects, uint8 *grades)
 
     new = (SimpleDb *)malloc(sizeof(SimpleDb));
 
+    if (new == NULL)
+    {
+        puts("HEAB IS OVERFLOW");
+        return false;
+    }
+
     if (start == NULL)
     {
 
